@@ -1,0 +1,1564 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  word-break: keep-all;
+  outline: 0px solid silver;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  max-width: 1200px;
+  margin: auto;
+  font-size: 0.9rem;
+  line-height: 1rem;
+  letter-spacing: 0.1px;
+  color: black;
+}
+
+img {
+  width: 100px;
+}
+
+/* body {
+  font-family: 'Noto Sans KR', sans-serif;
+  width: 100%;
+  margin: auto;
+  max-width: 1920px;
+  font-size: 0.9rem;
+  line-height: 1rem;
+  color: black;
+  letter-spacing: 0.1px;
+} */
+
+a {
+  transition: all 0.3s;
+  color: black;
+  cursor: pointer;
+}
+
+a:link {
+  color: black;
+  text-decoration: none;
+}
+  
+a:visited {
+    color: black;
+}
+
+a:active {
+    color: black;
+}
+
+ul {
+  padding: 10px 10px;
+}
+
+ul li {
+  list-style: none;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 4rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+  line-height: 3.2rem;
+}
+
+h3 {
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+}
+
+h5 {
+  font-size: 0.9rem;
+  line-height: 0.9rem;
+}
+
+.pc {
+  display: none;
+}
+
+.bodyfixed {
+  overflow-y: hidden;
+}
+
+footer {
+width: 100%;
+margin: auto;
+margin-top: 10%;
+max-width: 1300px;
+}
+
+article {
+display: flex;
+width: 100%;
+height: 100%;
+margin: auto;
+justify-content: center;
+}
+
+button {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: none;
+  margin: 10px 10px;
+  padding: 10px 30px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+
+/* start */
+header {
+  position: relative;
+  width: 100%;
+  padding:16px 30px;
+}
+
+.mainHeader {
+  width: 100%;
+  background-color: white;
+  position: relative;
+}
+
+.mainHeader_wrapper {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.hd_logo {
+  margin: auto;
+}
+
+.hd_logo img {
+  width: 160px;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  background-color: none;
+  font-family: swiper-icons;
+  font-size: var(--swiper-navigation-size);
+  color: gray;
+  text-transform: none!important;
+  letter-spacing: 0;
+  font-variant: initial;
+  line-height: 1;
+}
+
+/* mobil_hd 모바일 헤더 */
+
+.mobil_hd {
+  display: block;
+  width: 60px;
+  height: 60px;
+}
+
+.mobil_hd button {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  top: 34%;
+  right: 16%;
+  transform: translateY(-50%);
+  border: none;
+  cursor: pointer;
+}
+
+.mobil_hd span {
+  position: absolute;
+  width: 30px;
+  height: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #111;
+  border-radius: 30px;
+  transition: all 0.3s;
+}
+
+.mobileBtn_1 {
+  top: 10px;
+}
+
+.mobileBtn_2 {
+  top: 20px;
+}
+
+.mobileBtn_3 {
+  bottom: 8px;
+}
+
+.mobil_hd.openNav{
+
+  .mobileBtn_1 {
+    top: 20px;
+    transform: translateX(-50%) rotate(45deg);
+  }
+
+  .mobileBtn_2 {
+    opacity: 0;
+  }
+
+  .mobileBtn_3 {
+    top: 20px;
+    transform: translateX(-50%) rotate(-45deg);
+  }
+}
+
+/* gnb 네비게이션 */
+
+.gnb {
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100vh;
+  top: 80px;
+  left: 0;
+  background-color: #837c7c;
+  border-top: 1px solid #eee;
+  position: fixed;
+  overflow-y: auto;
+  z-index: 2;
+  padding-bottom: 150px;
+}
+
+nav {
+  background-color: white;
+}
+
+.hd_login {
+  background-color: #4d4c4c;
+  display: flex;
+  padding:16px 30px;
+  justify-content: space-around;
+}
+
+.hd_login a {
+  width: 250px;
+  padding:16px 30px;
+  text-align: center;
+  border-right: 1px solid #747474;
+  color: white;
+}
+
+.hd_login :nth-child(3) {
+  border: none;
+}
+
+.navlist {
+  margin: 16px 30px;
+  border-bottom: 1px solid #747474 ;
+}
+
+.navlist> a {
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+.navlist ul li{
+  margin-top: 5px;
+  padding:16px 30px;
+}
+
+.menuhead {
+  display: block;
+  line-height: 3rem;
+  font-size: 1.2rem;
+  padding: 10px 30px;
+  font-weight: bold;
+  border-left: 5px solid transparent;
+  color: #242424;
+}
+
+.sub_p {
+    background-color: #837c7c;
+    padding: 0px 30px;
+    color: white;
+  }
+  
+  .sub_p p {
+    line-height: 2rem;
+    padding: 10px 30px;
+  }
+  
+  .sub_p p::before {
+    content: "◦";
+    margin-right: 6px;
+}
+
+.menuhead:hover {
+  border-left: 5px solid #d60815;
+}
+
+.submenu {
+  background-color: #eeeeee;
+}
+
+.menu_name {
+  display: none;
+}
+
+.menu_links> :first-child {
+    font-weight: bold;
+    border-bottom: 1px solid #515151;
+}
+
+.menu_links li {
+    border-bottom: 1px solid #d2cece;
+}
+
+.sub_list li{
+    border-bottom: 1px solid #d2cece;
+}
+
+.sub_list> :first-child {
+    font-weight: bold;
+    border-bottom: 1px solid #515151;
+    font-size: 1rem;
+}
+
+.inner_wrapper> :nth-child(7) {
+    text-align: center;
+    background-color: rgb(200, 197, 197)
+}
+
+.inner_wrapper> :nth-child(7) li {
+    border: none;
+}
+
+.sub_list button {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    color: #5c3d29;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.searchBar {
+  margin: 16px 30px;
+  padding: 10px 30px;
+}
+
+.searchBar input  {
+  background-color: #dad6d6;
+  width: 300px;
+  padding: 16px 20px;
+  font-size: 0.7rem;
+  border: none;
+  border-radius: 20px;
+} 
+.searchBar img {
+  position: relative;
+  top: 10px;
+  right: 54px;
+  width: 28px;
+}
+
+/* swiper */
+
+.swiper-pagination {
+  position: absolute;
+  padding: 30px 30px;
+  text-align: center;
+  transition: .3s opacity;
+  transform: translate3d(0,0,0);
+  z-index: 10;
+}
+
+.swiper {
+  width: 100%;    
+  height: 700px;                                                                                               
+}
+
+.swiper-slide {
+  display: flex;
+  text-align: center;
+  background: #fff;
+  align-items: center;
+  justify-content: center;
+}
+
+.box1 {
+  background: url("https://ozimg.flyasiana.com/temp/image/20231102/8b1168a4-78e7-46c5-bb95-7af8cbca41b0.jpeg")no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.box1> div {
+  background-color: #111111a2;
+  position: relative;
+  top: 200px;
+  text-align: left;
+  color: white;
+}
+
+.box1> div> h3 {
+  padding: 16px 30px;
+  font-size: 2.4rem;
+}
+
+.box1> div> h5 {
+  padding: 16px 30px;
+  font-size: 1rem;
+  font-weight: 100;
+}
+
+.box2 {
+  background: url("https://ozimg.flyasiana.com/temp/image/20231103/d0f8304c-326e-4c30-978e-fa452c97eafc.jpeg")no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.box2> div {
+  position: relative;
+  top: 200px;
+  text-align: left;
+  color: #242424;
+}
+
+.box2> div> h3 {
+  padding: 16px 30px;
+  font-size: 2.4rem;
+}
+
+.box2> div> h5 {
+  padding: 16px 30px;
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 2rem;
+}
+
+.box3 {
+  background: url("https://ozimg.flyasiana.com/temp/image/20231031/e4bbc752-aa60-4413-b02d-ddb73fc195e3.jpeg")no-repeat;
+  background-size: cover;
+  background-position: left center;
+}
+
+.box3> div {
+  position: relative;
+  top: 200px;
+  text-align: left;
+  color: white;
+}
+
+.box3> div> h3 {
+  padding: 16px 30px;
+  font-size: 2.4rem;
+}
+
+.box3> div> h5 {
+  padding: 16px 30px;
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 2rem;
+}
+
+.box4 {
+  background: url("https://ozimg.flyasiana.com/temp/image/20231027/985c915f-8a28-4364-8ab0-169426872d54.jpeg")no-repeat;
+  background-size: cover;
+  background-position: left center;
+}
+
+.box4> div {
+  position: relative;
+  top: 200px;
+  text-align: left;
+  color: white;
+}
+
+.box4> div> h3 {
+  padding: 16px 30px;
+  font-size: 2.4rem;
+}
+
+.box4> div> h5 {
+  padding: 16px 30px;
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 2rem;
+}
+
+.box5 {
+  background: url("https://ozimg.flyasiana.com/temp/image/20231025/88731e94-891f-4dd6-8360-27309ec536bb.jpeg")no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.box5> div {
+  position: relative;
+  top: 200px;
+  text-align: left;
+  color: #242424;
+}
+
+.box5> div> h3 {
+  padding: 16px 30px;
+  font-size: 2.4rem;
+}
+
+.box5> div> h5 {
+  padding: 16px 30px;
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 2rem;
+  color: rgb(233, 206, 131);
+}
+
+.b5-t {
+  color: #E4C97E;
+}
+
+.box6 {
+  background: url("https://ozimg.flyasiana.com/temp/image/20230918/a81cd83c-9373-425c-ac30-aaaeaf202288.jpeg")no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.box6> div {
+  position: relative;
+  top: 200px;
+  text-align: left;
+  color: #242424;
+}
+
+.box6> div> h3 {
+  padding: 16px 30px;
+  font-size: 2.4rem;
+}
+
+.box6> div> h5 {
+  padding: 16px 30px;
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 2rem;
+}
+
+.b6-t {
+  color: #1266FF;
+}
+
+
+.box7 {
+  background: url("https://ozimg.flyasiana.com/temp/image/20231030/6b047c74-324f-4fe6-bf19-ad3a7a74d842.jpeg")no-repeat;
+  background-size: cover;
+  background-position: 40% center;
+}
+
+.box7> div {
+  position: relative;
+  top: 200px;
+  text-align: left;
+  color: #242424;
+}
+
+.box7> div> h3 {
+  padding: 16px 30px;
+  font-size: 2.4rem;
+}
+
+.box7> div> h5 {
+  padding: 16px 30px;
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 2rem;
+}
+
+.b7-t {
+  color: #310000;
+}
+
+
+.box8 {
+  background: url("https://ozimg.flyasiana.com/temp/image/20231023/1106c4d2-a9b8-43cd-86e8-0866b1a4026a.jpeg")no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.box8> div {
+  position: relative;
+  top: 200px;
+  text-align: left;
+  color: white;
+}
+
+.box8> div> h3 {
+  padding: 16px 30px;
+  font-size: 2.4rem;
+}
+
+.box8> div> h5 {
+  padding: 16px 30px;
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 2rem;
+}
+
+ /* ticket */
+
+.ticket {
+  background-color: #b1adad;
+  display: block;
+  height: 840px;
+  padding: 40px 30px;
+}
+
+.ticket> div {
+  margin: auto;
+  margin-top: 50px;
+  padding: 16px 30px;
+}
+
+.ticket_box div> h3 {
+  padding: 16px 10px;
+  font-size: 2.3rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 2.5rem;
+}
+
+.ticket_box {
+  background-color: white;
+  margin-top: 50px;
+  padding: 16px 30px;
+  border-radius: 15px;
+  color:  #242424;
+}
+
+.ticket_box li {
+  list-style: none;
+  margin: auto;
+}
+
+.ticket_wrap ul {
+  display: flex;
+  padding: 16px 30px;
+  border-bottom: 1px solid #4d4c4c;
+}
+
+.ticket_wrap ul p {
+  width: 60px;
+  padding: 14px 16px;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 20px;
+  color: #4d4c4c;
+}
+
+.ticket_wrap ul :nth-child(3) span{
+  position: relative;
+  right: 8px;
+}
+
+.ticket_tab_btn > li.ticket_active{
+  position: relative;
+}
+
+.ticket_tab_btn > li.ticket_active p{
+  background-color: #4d4c4c;
+  color: white;
+}
+
+.ticket_tab_container{
+  width: 100%; 
+  height: 380px;
+  overflow: hidden;
+}
+
+.ticket_tab_container > div{
+  width: 100%; 
+  height: 380px;
+  padding: 16px 10px;
+}
+
+.ticket_list_box1 {
+  display: flex;
+  padding: 16px 30px;
+  justify-content: space-around;
+}
+
+.ticket_list_box1 div {
+  padding: 8px 20px;
+  text-align: center;
+}
+
+.ticket_list_box1 div h4 {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+.ticket_list_box1 div h5 {
+  font-weight: 100;
+}
+
+.ticket_date1 {
+  padding: 16px 20px;
+}
+
+.ticket_date1 div {
+  background: #ececec;
+  padding: 16px 20px;
+  border-radius: 15px;
+}
+
+.ticket_date1 input {
+  background: #ececec;
+  border: none;
+  text-align: right;
+}
+
+.ticket_mg img {
+  position: relative;
+  top: 2px;
+  width: 36px;
+}
+
+.ticket_list_box2 {
+  display: flex;
+  padding: 16px 30px;
+  justify-content: space-around;
+}
+
+.ticket_list_box2 div {
+  padding: 8px 20px;
+  text-align: center;
+}
+
+.ticket_list_box2 div h4 {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+.ticket_list_box2 div h5 {
+  font-weight: 100;
+}
+
+.ticket_date2 {
+  padding: 16px 20px;
+}
+
+.ticket_date2 div {
+  background: #ececec;
+  padding: 16px 20px;
+  border-radius: 15px;
+}
+
+.ticket_date2 input {
+  background: #ececec;
+  border: none;
+  text-align: right;
+}
+
+.ticket_datea {
+  padding: 16px 20px;
+}
+
+.ticket_datea div {
+  background: #ececec;
+  padding: 16px 20px;
+  border-radius: 15px;
+}
+
+.ticket_datea a {
+  margin-right: 12px;
+}
+
+.ticket_datea input {
+  background: #ececec;
+  border: none;
+  text-align: center;
+}
+
+.ticket_dateb {
+  padding: 16px 20px;
+}
+
+.ticket_dateb div {
+  background: #ececec;
+  padding: 16px 20px;
+  border-radius: 15px;
+}
+
+.ticket_dateb select {
+  background: #ececec;
+  border: none;
+  text-align: center;
+}
+
+/* check 아시아나 클럽 */
+
+.check {
+  display: flex;
+  height: 700px;
+  padding:16px 30px;
+  text-align: center;
+  justify-content: center;
+  color:  #242424;
+}
+
+.check img {
+  width: 58px;
+  margin-bottom: 10px;
+  padding: 5px 5px;
+  border: 0px solid #f3f3f3;
+}
+
+.check_box {
+  margin: auto;
+}
+
+.check_box> :nth-child(1) {
+  padding: 10px 10px;
+}
+
+.check_box> :nth-child(1) h4 {
+  margin-bottom: 10px;
+  padding: 10px 10px;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.check_box> :nth-child(1) h3 {
+  font-size: 2.5rem;
+  padding: 16px 30px;
+  font-weight: bold;
+}
+
+.check_box> :nth-child(2) {
+  display: flex;
+  margin-top: 36px;
+  justify-content: center;
+}
+
+.check_box .mg {
+  margin: 10px 10px;
+}
+
+.check_box .check_bnt {
+  margin: auto;
+  margin-top: 36px;
+  padding: 0px 30px;
+}
+
+.check_bnt button {
+  width: 130px;
+  padding: 10px 30px;
+  border: 1px solid #191919;
+}
+
+.check_bnt :nth-child(1) {
+  transition: 0.3s;
+}
+
+.check_bnt :nth-child(2) {
+  background-color: #191919;
+  color: white;
+}
+
+
+/* special 간편 조회 */
+
+.special> .swiper-pagination {
+  position: absolute;
+  padding: 40px 30px;
+  text-align: center;
+  transition: .3s opacity;
+  transform: translate3d(0,0,0);
+  z-index: 10;
+}
+
+.special {
+  text-align: center;
+}
+
+.special_box {
+  background-color: #f8fcff;
+  position: relative;
+  top: 20%;
+  margin: auto;
+  height: 870px;
+  color:  #242424;
+}
+
+.special_box img {
+  width: 300px;
+}
+
+.special_box> :nth-child(1) h3{
+  font-weight: bold;
+  padding: 36px 30px;
+  font-size: 2.3rem;
+}
+
+.special_box> :nth-child(1) h5 {
+  margin-bottom: 10px;
+  padding: 16px 30px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.4rem;
+  color: #707070;
+}
+
+.special_sub_list {
+  background-color: #f8fcff;
+}
+
+.special_sub_list> div {
+  background-color: white;
+  width: 300px;
+  height: 130px;
+  margin: auto;
+  margin-top: 10px;
+  padding: 16px 30px;
+  border: 1px solid #d1ecfa;
+}
+
+.special_sub_list> div h4 {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.special_sub_list> div p {
+    margin-top: 10px;
+}
+
+.special_sub_list> div div{
+  display: flex;
+  justify-content: center;
+}
+
+.special_sub_list> div div h4 {
+  margin-right: 8px;
+}
+
+.special_sub_list> div div :nth-child(2) {
+  font-size: 1.3rem;
+  color: #d60815;
+}
+
+/* asiana_pick 아시아나 여행 픽창 */
+
+.asiana_pick {
+  background-color: #837c7c;
+  display: block;
+  height: 960px;
+  padding:16px 30px;
+  text-align: center;
+  color:  #242424;
+}
+
+.asiana_pick_box {
+  background-color: #ffffff;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding-bottom: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.asiana_pick_box> :first-child h5 {
+  margin-top: 30px;
+  padding: 26px 30px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #161616;
+}
+
+.asiana_pick_box> :first-child h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding: 30px 30px;
+}
+
+.asiana_pick_btn {
+  display: flex;
+  justify-content: center;
+  border-bottom: 3px solid #333333;
+}
+
+.asiana_pick_btn> li {
+  width: 46%;
+  margin: auto;
+}
+
+.asiana_pick_btn > li.active p{
+  color: #d60815;
+}
+
+.tab_container { 
+  width: 100%; 
+  height: 600px;
+  overflow: hidden;
+}
+
+.tab_container > div {
+  height: 600px;
+  color: #fff;
+}
+
+.content {
+  display: flex;
+  margin: auto;
+  padding:16px 10px;
+  justify-content: center;
+}
+
+.content > div {
+    color: #ffffff;
+    font-weight: 100;
+}
+
+#tab01 {
+  display: flex;
+  justify-content: center;
+}
+
+#tab01 img {
+  width: 150px;
+}
+
+#tab02 {
+  display: flex;
+  width: 100%; 
+  height: 540px;
+  justify-content: center;
+}
+
+#tab02 img {
+  width: 180px;
+}
+
+section {
+    background-color: rgb(233, 233, 233);
+}
+
+section> div {
+    padding: 16px 20px;
+}
+
+section h5 {
+    font-size: 0.8rem;
+    color:  #242424;
+    margin-bottom: 10px;
+}
+
+section h4 {
+  font-size: 0.8rem;
+  color:  #242424;
+  margin-bottom: 10px;
+}
+
+#tab01 {
+  padding:16px 30px;
+}
+
+#tab01> :nth-child(1)> :first-child {
+  margin: 25px 10px 40px 10px;
+}
+
+#tab01> :nth-child(1)> :last-child {
+  margin: 20px 10px 20px 10px;
+}
+
+#tab01> :nth-child(2)> :first-child {
+  margin: 25px 10px 40px 10px
+}
+
+#tab01> :nth-child(2)> :last-child {
+  margin: 20px 10px 20px 10px
+}
+
+#tab02> :nth-child(1)> :first-child {
+  margin: 25px 10px 30px 10px;
+}
+
+#tab02> :nth-child(1)> :last-child {
+  margin: 30px 10px 20px 10px;
+}
+
+#tab02> :nth-child(2)> :first-child {
+  margin: 25px 10px 30px 10px;
+}
+
+#tab02> :nth-child(2)> :last-child {
+  margin: 30px 10px 20px 10px;
+}
+
+.gongi {
+  background-color: #837c7c;
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.gongi img{
+  width: 100%;
+  padding: 16px 30px;
+}
+
+/* event 이벤트 */
+
+.event {
+  height: 850px;
+  margin-top: 70px;
+  text-align: center;
+  padding:16px 30px;
+  text-transform: uppercase;
+}
+
+.event h3 {
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+  padding:16px 30px;
+  font-weight: bold;
+  color:  #242424;
+}
+
+.event h5 {
+  position: relative;
+  top: 674px;
+  width: 100%;
+  background-color: #111111ba;
+  font-weight: 100;
+  padding:16px 30px;
+  color: white;
+}
+
+.eventa {
+  background: url("https://ozimg.flyasiana.com/temp/image/20231012/32d06c80-f33e-4985-ad32-035d74ef3d1e.jpeg")no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.eventb{
+  background: url("https://ozimg.flyasiana.com/temp/image/20230927/7701afb5-b427-41dc-b73a-4780e12aadd5.jpeg")no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.eventc {
+  background: url("https://ozimg.flyasiana.com/temp/image/20230914/6646ddb2-6263-46f0-ba75-1f3b50ae35b5.jpeg")no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+
+/* footer */
+
+footer {
+  background-color: #5D5D5D;
+  height: 980px;
+  padding:40px 30px;
+  margin: auto;
+}
+
+footer h5 {
+  padding: 16px 30px;
+  font-weight: 200;
+  color: #ccc;
+}
+
+footer> :nth-child(2) {
+  height: 700px;
+}
+
+footer> :nth-child(2)> :nth-child(1) {
+  background-color: #4D4D4D;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+footer> :nth-child(2)> :nth-child(1)> div {
+  display: flex;
+  margin: auto;
+}
+
+
+footer> :nth-child(2)> :nth-child(1)> :first-child h5 {
+  width: 100%;
+  background-color: #4D4D4D;
+  border: 1px solid #6D6D6D;
+}
+
+footer> :nth-child(2)> :nth-child(1)> :last-child h5 {
+  width: 100%;
+  background-color: #4D4D4D;
+  border: 1px solid #6D6D6D;
+}
+
+footer> :nth-child(2)> :nth-child(2) {
+    background-color: #4D4D4D;
+    padding: 20px 10px;
+    border: 1px solid #6D6D6D;
+}
+
+footer> :nth-child(2)> :nth-child(2)> h5 {
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+footer> :nth-child(2)> :nth-child(2) a {
+  margin-left: 10px;
+  color: #ccc;
+}
+
+footer> :nth-child(2)> :nth-child(2)> :nth-child(1) {
+  padding: 16px 22px;
+}
+
+footer> :nth-child(2)> :nth-child(2)> :nth-child(1) :nth-child(1) {
+  padding-right: 12px;
+  font-weight: bold;
+  border-right: 1px solid #747474;
+}
+
+footer> :nth-child(3) {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer> :nth-child(3)> :nth-child(1) {
+    background: url('https://flyasiana.com/C/pc/image/common/new_logo_skytrax_ko.png') 0 0 no-repeat;
+    background-size: auto 60px;
+    width: 175px;
+    height: 60px;
+    margin-top: 30px;
+}
+
+footer> :nth-child(3)> :nth-child(2) img {
+    width: 130px;
+}
+
+/* 팝업 */
+
+.popup{
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  z-index: 10000;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none; /* 첫화면에 안보이게 처리  */
+}
+
+.pwrap{
+  max-width: 800px;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 150px;  
+  background-color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+.popup_list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.popup_list label {
+  font-size: 1rem;
+  margin: auto;
+}
+
+.popup_list button {
+  border: none;
+  padding: 0;
+}
+
+.popup_list button img {
+  width: 40px;
+}
+
+.popup_list a {
+  margin-top: 30px;
+}
+
+
+/* .pwrap .pwrap_box >:nth-child(1) input {
+  display: flex;
+  justify-content: center;
+} */
+
+/* laptop start */
+
+@media screen and (min-width: 1366px) {
+    article {
+        display: flex;
+        width: 100%;
+        height: 500px;
+        margin: auto;
+        max-width: 1200px;
+        justify-content: center;
+      }
+
+      header {
+        padding: 26px 0px;
+      }
+
+      .mainHeader_container {
+        width: 1200px;
+        margin: 0 auto;
+      }
+
+      .mainHeader {
+        padding: 0;
+      }
+
+      .hd_logo {
+        margin: 0;
+        margin: 16px 30px;
+      }
+      
+      .hd_logo img {
+        width: 200px;
+      }
+
+      .topHeader_container {
+        display: block;
+      }
+
+      .searchBar, .sub_p, .hd_login, .mobil_hd{
+        display: none;
+      }
+
+      .gnb {
+        position: static;
+        background: none;
+        display: block !important;
+        height: 100%;
+        margin: auto;
+        padding: 0;
+        border: none;
+      }
+
+      nav {
+        display: flex;
+        margin-right: 30px;
+        justify-content: space-between;
+      }
+
+      .navlist {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+        flex-wrap: nowrap;
+        border: none;
+      }
+
+      .menuhead {
+        background: none;
+        display: block;
+        font-size: 1.2rem;
+        padding: 4px 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        border-left: 5px solid transparent;
+        color: #242424;
+      }
+
+      .box3 {
+        background: url("https://ozimg.flyasiana.com/temp/image/20231031/e4bbc752-aa60-4413-b02d-ddb73fc195e3.jpeg")no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+
+      .swiper-slide> div> h3{
+        padding: 16px 100px;
+        font-size: 3rem;
+        line-height: 3.5rem;
+      }
+
+      .swiper-slide> div> h5 {
+        padding: 16px 100px;
+        font-size: 1.4rem;
+        font-weight: 100;
+        line-height: 2rem;
+      }
+
+      .ticket {
+        background-color: #837c7c;
+        display: block;
+        height: 700px;
+        padding: 40px 100px;
+      }
+
+      .ticket> div {
+        margin: auto;
+        margin-top: 50px;
+        padding: 40px 50px;
+      }
+      
+      .ticket_box div> h3 {
+        padding: 20px 50px;
+        font-size: 2.6rem;
+        font-weight: bold;
+        text-align: left;
+        line-height: 3rem;
+      }
+      
+      .ticket_box {
+        background-color: white;
+        margin-top: 50px;
+        padding: 20px 100px;
+        border-radius: 15px;
+        color:  #242424;
+      }
+
+      .ticket_box li {
+        list-style: none;
+        margin: 0;
+        margin-right: 20px; 
+      }
+      
+      .ticket_wrap ul {
+        display: flex;
+        padding: 20px 50px;
+        border-bottom: 1px solid #4d4c4c;
+      }
+      
+      .ticket_wrap ul p {
+        width: 100px;
+        padding: 16px 20px;
+        font-size: 1.5rem;
+        border-radius: 20px;
+        color: #4d4c4c;
+      }
+      
+      .ticket_tab_btn > li.ticket_active p{
+        background-color: #4d4c4c;
+        color: white;
+      }
+
+      .ticket_content {
+        display: flex;
+        justify-content: space-between;
+      }
+      
+      .ticket_tab_container{
+        width: 100%; 
+        height: 140px;
+        overflow: hidden;
+      }
+      
+      .ticket_tab_container > div{
+        width: 100%; 
+        height: 140px;
+      }
+      
+      .ticket_list_box1 {
+        display: flex;
+        padding: 16px 20px;
+        justify-content: space-around;
+      }
+      
+      .ticket_list_box1 div {
+        padding: 0;
+        margin: auto;
+        text-align: center;
+      }
+      
+      .ticket_list_box1 div h4 {
+        margin-bottom: 8px;
+        font-size: 1.2rem;
+      }
+      
+      .ticket_list_box1 div h5 {
+        font-weight: 100;
+      }
+      
+      .ticket_date1 div {
+        background: #ececec;
+        width: 160px;
+        padding: 16px 20px;
+        border-radius: 10px;
+      }
+      
+      .ticket_date1 input {
+        background: #ececec;
+        width: 100%;
+        border: none;
+        text-align: right;
+      }
+      
+      .ticket_list_box2 {
+        display: flex;
+        padding: 16px 20px;
+        justify-content: space-around;
+      }
+      
+      .ticket_list_box2 div {
+        padding: 0;
+        margin: auto;
+        text-align: center;
+      }
+      
+      .ticket_date2 {
+        padding: 16px 20px;
+      }
+      
+      .ticket_date2 div {
+        background: #ececec;
+        width: 160px;
+        padding: 16px 20px;
+        border-radius: 10px;
+      }
+      
+      .ticket_date2 input {
+        background: #ececec;
+        width: 100%;
+        border: none;
+        text-align: right;
+      }
+
+      .ticket_datea div {
+        background: #ececec;
+        width: 160px;
+        padding: 16px 20px;
+        border-radius: 15px;
+      }
+      
+      .ticket_datea input {
+        background: #ececec;
+        width: 40px;
+        margin-left: 34px;
+        border: none;
+        text-align: center;
+      }
+      
+      .ticket_dateb div {
+        background: #ececec;
+        width: 160px;
+        padding: 16px 20px;
+        border-radius: 10px;
+      }
+      
+      .ticket_dateb select {
+        background: #ececec;
+        width: 100%;
+        border: none;
+        text-align: right;
+      }
+      
+} 
